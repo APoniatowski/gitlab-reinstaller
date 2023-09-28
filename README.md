@@ -16,11 +16,16 @@ Before running the script, ensure the following prerequisites are met:
 
 Follow these steps to use the script:
 
-1. **Clone the Repository:** Start by cloning the repository containing the script to your server.
+1. **Clone the Repository:** Start by cloning the repository containing the script to your server (if you decided to fork it).
 
    ```bash
    git clone https://github.com/your-username/your-repo.git
    ```
+
+   - Alternatively, you can download it here:
+     ```
+      https://github.com/APoniatowski/gitlab-reinstaller
+     ```
 
 2. Navigate to the Directory: Change your working directory to the cloned repository.
 
@@ -28,7 +33,7 @@ Follow these steps to use the script:
   cd your-repo
   ```   
 
-3. Edit the Script: Open the script file (`reinstall_gitlab.sh`) using a text editor and configure the variables at the top of the script:
+3. Edit the Script: Open the script file (`gitlab-reinstaller.sh`) using a text editor and configure the variables at the top of the script:
 
   - `gitlab_version`: Set it to the GitLab CE version you want to install. You can find the desired version on the GitLab website or in the official GitLab CE repository.
 
@@ -37,7 +42,7 @@ Follow these steps to use the script:
   For example, open the script in a text editor using the `nano` editor:
 
   ```bash
-  nano reinstall_gitlab.sh
+  nano gitlab-reinstaller.sh
   ```
 4. Locate the variables section at the top of the script and modify them according to your preferences:
 
@@ -53,13 +58,13 @@ Follow these steps to use the script:
 6. Make the Script Executable: Ensure the script has executable permissions to allow it to be run:
 
   ```bash
-  chmod +x reinstall_gitlab.sh
+  chmod +x gitlab-reinstaller.sh
   ```
 
 7. Run the Script: Execute the script with superuser privileges (e.g., sudo) to perform the GitLab reinstallation:
 
   ```bash
-  sudo ./reinstall_gitlab.sh
+  sudo ./gitlab-reinstaller.sh
   ```
 
 Follow the On-screen Instructions: The script will guide you through the reinstallation process, including stopping GitLab services, backing up data, uninstalling the existing GitLab CE, installing the specified version, reconfiguring GitLab, starting services, and restoring data and configuration files.
